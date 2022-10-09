@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="../index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="../assets/icons/favicon.ico" type="image/x-icon">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+    <script defer src="https://kit.fontawesome.com/9d8f4f9320.js" crossorigin="anonymous"></script>
+    <script defer src="index.js"></script>
+    <title>Flitty | Invite</title>
+</head>
+
+<body>
+    <section class="mainSec container-fluid">
+        <main>
+            <a href="../"> <img src="../assets/Fllity-Logo/200/fllity-logo.png" id='logo' alt="" /></a>
+            <div class="mainCont" id="mainCont">
+                <img src="../assets/Mobile-Mockup/Left/500/mobile-mockup-left.webp" class="formMockUp" alt="" />
+                <div class="formDiv">
+                    <h3>Your <span>Exclusive Invite</span><br>is Here !</h3>
+                    <div class="formSecDiv">
+                        <div class="nameCont">
+                            <div class="form-floating mb-2">
+                                <input type="text" autocomplete='off' class="form-control mainInputs me"
+                                    id="floatingInput" placeholder="First Name">
+                                <label class="label" for="floatingInput">First Name</label>
+                            </div>
+                            <div class="form-floating mb-2">
+                                <input type="text" autocomplete='off' class="form-control mainInputs" id="floatingInput"
+                                    placeholder="Last Name">
+                                <label class="label" for="floatingInput">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="input-group mb-2">
+                            <div class="form-floating">
+                                <input type="email" autocomplete='off' class="form-control email mainInputs"
+                                    id="floatingInputGroup1" placeholder="Username">
+                                <label class="label" for="floatingInputGroup1">E-Mail</label>
+                            </div>
+                            <span class="input-group-text getOtpSpan" id="getOtpBtn">Get
+                                OTP </span>
+                            <span id="collapseSpan" data-bs-toggle="collapse" data-bs-target="#collapseOTP"
+                                aria-expanded="false" aria-controls="collapseOTP"
+                                style="display:none;position:absolute;"></span>
+                        </div>
+                        <div class="collapse" id="collapseOTP">
+                            <div class="otpDivCont mb-3">
+                                <div class="otpLeft">
+                                    <input type="tel" autocomplete='off' inputmode="tel" required class="otpInput"
+                                        id='first' maxlength="1" onkeyup="clickEvent(this, 'sec')">
+                                    <input type="tel" autocomplete='off' inputmode="tel" required class="otpInput"
+                                        id="sec" maxlength="1" onkeyup="clickEvent(this, 'third')">
+                                    <input type="tel" autocomplete='off' inputmode="tel" required class="otpInput"
+                                        id="third" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+                                    <input type="tel" autocomplete='off' inputmode="tel" required class="otpInput"
+                                        id="fourth" maxlength="1" onkeyup="clickEvent(this,'fourth')">
+                                </div>
+                                <div class="otpRight">
+                                    <span type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+                                        aria-expanded="false" aria-controls="collapseExample" id="inavalidOtpButton">
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="collapse mb-3" id="collapseExample">
+                            <div class="InvalidOtpDiv">
+                                <span id="invalidSpan">!</span>
+                                <span id="resend" class="greyscale">Resend ?</span>
+                            </div>
+                        </div>
+                        <div class="form-floating mb-2">
+                            <input type="text" autocomplete='off' class="form-control mainInputs" id="floatingInput"
+                                placeholder="Last Name">
+                            <label class="label" for="floatingInput">Instagram Link</label>
+                        </div>
+                        <button class="mainBtn mailBtn" id="getInviteBtn">Get Invite</button>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </main>
+    </section>
+    <section>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+            id="modalDisplay">
+            Launch static backdrop modal
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade errorModal" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 modalHead" id="staticBackdropLabel"></h1>
+                    </div>
+                    <div class="modal-body">
+                        <p id="modalText"></p>
+                        <p id="modalSubText"></p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">Understood</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdropa"
+            id="finalModalDisplay"></button>
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade errorModal" id="staticBackdropa" data-bs-backdrop="static" data-bs-keyboard="false"
+            tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5 finalmodalHead" id="staticBackdropLabel">Registration Successfull
+                        </h1>
+                    </div>
+                    <div class="modal-body">
+                        <p id="finalModalText">Exclusive Invite Enroute</p>
+                        <p id="finalModalSubText">You will recieve the invitation link at prelaunch</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn modal-btn" id="finalSuccessBtn"
+                            data-bs-dismiss="modal">Next</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="socialIconsCont">
+            <a href="https://m.facebook.com/flittyindia/"> <img src="../assets/Social-logos/facebook/fb128.png"
+                    alt="fb" /></a>
+            <a href="https://www.instagram.com/flittyindia/"> <img src="../assets/Social-logos/instagram/in128.png"
+                    alt="insta" /></a>
+            <a href="https://mobile.twitter.com/flittyindia"><img src="../assets/Social-logos/twitter/tw128.png"
+                    alt="twitter" /></a>
+            <a href="mailto: support@flitty.app"><img src="../assets/Social-logos/mail/email.png" alt="twitter" /></a>
+        </div>
+        <p class="copyRightCont">Copyright 2022 | Lash Technologies</p>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,357 @@
+::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: transparent !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: transparent !important;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: transparent !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .collapsing {
+        transition-property: height, visibility !important;
+        transition-duration: .35s !important;
+    }
+}
+
+.formMockUp {
+    width: max-content;
+    max-height: 75vh;
+    transform: rotateZ(4deg);
+    object-fit: cover;
+    margin-top: 4%;
+    transform: rotateY(30deg) rotateX(20deg) !important;
+}
+
+.formDiv {
+    width: 50%;
+}
+
+.formDiv>h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 45px;
+    line-height: 120px;
+    text-align: left;
+    margin: unset;
+    margin-left: 2.5%;
+    margin-bottom: 2%;
+    padding: unset;
+    line-height: 1.2;
+}
+
+.formDiv>h3>span {
+    color: #E2AD12;
+    animation-name: inviteText !important;
+    animation-duration: 2s !important;
+    animation-iteration-count: infinite !important;
+    animation-timing-function: ease-in-out !important;
+    animation-fill-mode: both;
+}
+
+@keyframes inviteText {
+    0% {
+        color: #E2AD12
+    }
+
+    50% {
+        color: #fff;
+    }
+
+    100% {
+        color: #E2AD12;
+    }
+}
+
+.formSecDiv {
+    width: 95%;
+    margin: 0 auto;
+}
+
+.mainInputs {
+    background-color: transparent !important;
+    color: #fff !important;
+}
+
+.label {
+    color: #fff !important;
+}
+
+.email {
+    border-right-color: transparent !important;
+}
+
+
+
+.otpDivCont {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ced4da;
+    border-radius: 0.375rem !important;
+    padding: 0.75rem !important;
+}
+
+.otpLeft {
+    width: max-content;
+}
+
+.getOtpSpan {
+    background: transparent !important;
+    color: transparent !important;
+    border-left-color: transparent !important;
+    pointer-events: none;
+    cursor: pointer;
+    width: 0;
+}
+
+.otpClrActive {
+    color: #E2AD12 !important;
+    width: unset;
+}
+
+.otpInput {
+    width: 8%;
+    padding: 2px 0;
+    outline: unset !important;
+    border: unset !important;
+    color: #E2AD12 !important;
+    margin: 0 2px;
+    border-bottom: 1px solid #fff !important;
+    text-align: center !important;
+    font-weight: 700 !important;
+    font-size: 1.2rem !important;
+    background-color: transparent;
+    border: 1px solid #ced4da;
+    cursor: pointer;
+}
+
+.otpRight>span {
+    color: #1adb80;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.InvalidOtpDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#invalidSpan {
+    background: rgb(241, 107, 123);
+    margin: unset;
+    color: whitesmoke;
+    padding: 1px 8px;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+#resend {
+    color: #E2AD12;
+    margin: unset;
+    padding: unset;
+    cursor: pointer;
+}
+
+.mailBtn {
+    width: 100%;
+    margin-top: 2% !important;
+    /* pointer-events: none; */
+    cursor: pointer;
+}
+
+
+.nameCont {
+    display: grid;
+    grid-template-columns: auto auto;
+    column-gap: 5px;
+}
+
+.green {
+    color: cadetblue !important;
+    /* border-color: cadetblue !important; */
+    pointer-events: none;
+}
+
+.red {
+    color: white !important;
+    border-color: rgb(241, 107, 123) !important;
+    /* pointer-events: none; */
+}
+
+.greyscale {
+    cursor: not-allowed;
+    pointer-events: none;
+    /* filter: grayscale(1); */
+}
+
+.pointerEventsAll {
+    pointer-events: all;
+}
+
+.form-floating {
+    --bs-gutter-x: unset !important;
+}
+
+.myModal {
+    background-color: #1adb80 !important;
+}
+
+.modal-header {
+    border-bottom-color: #E2AD12 !important;
+    color: rgb(241, 107, 123) !important;
+}
+
+.modal-content {
+    background-color: rgba(0, 0, 0, 0.735) !important;
+    color: #fff !important;
+}
+
+.modal-footer {
+    border-top-color: #E2AD12 !important;
+}
+
+.modal-btn {
+    background-color: #E2AD12 !important;
+}
+
+#modalDisplay,
+#finalModalDisplay {
+    display: none !important;
+}
+
+#modalSubText {
+    font-size: 12px;
+    color: cadetblue;
+    padding: unset !important;
+    margin: unset !important;
+}
+
+.finalmodalHead {
+    color: cadetblue !important;
+}
+
+#finalModalText {
+    color: #E2AD12 !important;
+}
+
+#finalModalSubText {
+    color: #ffffff;
+    font-size: 12px;
+    padding: unset !important;
+    margin: unset !important;
+}
+
+
+@media(max-width:1150px) {
+    .formDiv>h3 {
+        font-size: 40px;
+    }
+
+    .mainCont {
+        margin-top: 2%;
+    }
+
+    .formMockUp {
+        height: 70vh;
+    }
+}
+
+@media(max-width:900px) {
+    #mainCont {
+        margin-top: 15%;
+    }
+
+    .formMockUp {
+        height: 70vh;
+    }
+
+    .mainInputs {
+        height: unset !important;
+        --bs-gutter-x: unset !important;
+    }
+
+    .formDiv>h3 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width:820px) {
+    #mainCont {
+        margin-top: 12%;
+    }
+
+    .nameCont {
+        grid-template-columns: auto;
+    }
+
+    .formMockUp {
+        display: none;
+    }
+
+    .formDiv {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:600px) {
+    #mainCont {
+        margin-top: 18%;
+    }
+}
+
+@media (max-width:500px) {
+    .formMockUp {
+        display: none;
+    }
+
+    #mainCont {
+        margin-top: 25%;
+    }
+
+    .formDiv {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+
+    .formDiv>h3 {
+        font-size: 30px;
+    }
+
+    .otpInput {
+        width: 10%;
+    }
+}
+
+@media (max-width:380px) {
+    .formDiv>h3 {
+        font-size: 20px;
+    }
+
+    .label {
+        font-size: 12px !important;
+    }
+
+    .mainInputs {
+        font-size: 14px !important;
+    }
+}
+
+@media(min-height:1368px) {
+    .formMockUp {
+        height: 40vh;
+    }
+}
