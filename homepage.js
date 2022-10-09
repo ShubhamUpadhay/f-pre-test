@@ -4,6 +4,7 @@ let slug = params.slug ? params.slug : "not available";
 console.log("Slug", slug)
 
 const CheckRo = async () => {
+    console.log('check ro')
     try {
         let ro = await fetch('https://flitty-backend.herokuapp.com/test/chkget');
         console.log(await ro.json());
