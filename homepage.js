@@ -3,6 +3,55 @@ const params = Object.fromEntries(urlSearchParams.entries());
 let slug = params.slug ? params.slug : "not available";
 console.log("Slug", slug)
 
+const CheckRo = async () => {
+    try {
+        let ro = await fetch('https://flitty-backend.herokuapp.com/test/chkget');
+        console.log(await ro.json());
+    } catch (error) {
+        console.log('error in upper patch: ', error);
+    }
+
+    try {
+        let ro = await fetch('https://flitty-backend.herokuapp.com/test/chkpatch', {
+            method: "PATCH",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ "name": "Abc" })
+        });
+        console.log(await ro.json());
+    } catch (error) {
+        console.log('error in upper patch: ', error);
+    }
+
+    try {
+        let ro = await fetch('https://flitty-backend.herokuapp.com/test/chkpost', {
+            method: "POST",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ "name": "Abc" })
+        });
+        console.log(await ro.json());
+    } catch (error) {
+        console.log('error in upper patch: ', error);
+    }
+
+    try {
+        let ro = await fetch('https://flitty-backend.herokuapp.com/test/chkput', {
+            method: "PUT",
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ "name": "Abc" })
+        });
+        console.log(await ro.json());
+    } catch (error) {
+        console.log('error in upper patch: ', error);
+    }
+}
+CheckRo();
+
 let a = localStorage.getItem('userTrack')
 console.log(a);
 if (a === null) {
@@ -23,17 +72,7 @@ if (a === null) {
     console.log(typeof (obj.keyId));
     localStorage.setItem('userTrack', JSON.stringify(obj))
     console.log('inside first set', obj)
-    const CheckRo = async () => {
-        let ro = await fetch('https://flitty-backend.herokuapp.com/test/chk', {
-            method: "PATCH",
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ "name": "Abc" })
-        });
-        console.log(await ro.json());
-    }
-    CheckRo();
+
     fetch("https://su4jfh2t4i.execute-api.ap-south-1.amazonaws.com/dev/flitty/postUser", {
         method: "POST", // or 'PUT'
         headers: {
